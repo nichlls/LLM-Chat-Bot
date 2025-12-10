@@ -13,24 +13,54 @@ if not all([REGION, KB_ID, MODEL_ARN]):
         "Missing required environment variables: BEDROCK_REGION, BEDROCK_KB_ID, BEDROCK_MODEL_ARN"
     )
 
-# TODO: Allow user to provide prompt and type
-# TODO: Improve prompt
-vehicle_category = "logistics"
-prompt = f"List cars below 150 per day for {vehicle_category}"
 
-# Setup bedrock
-client = boto3.client("bedrock-agent-runtime", region_name=REGION)
+# TODO: Capture vehicle category and price per day from user input
+def build_prompt(vehicle_category: str, price_per_day: float) -> str:
+    """
+    Constructs the prompt for the Bedrock API call.
 
-# TODO: Improve handling
-# Call bedrock
-try:
-    response = client.retrieve_and_generate(
-        input={"text": prompt},
-        retrieveAndGenerateConfiguration={
-            "type": "KNOWLEDGE_BASE",
-            "knowledgeBaseConfiguration": {
-                "knowledgeBaseId": KB_ID,
-                "modelArn": MODEL_ARN,
+    This prompt instructs the AI car-rental assistant to query the knowledge base
+    for vehicles matching the given category and maximum price per day, and to
+    return the results in a strict JSON format.
+
+    :param vehicle_category: The desired category of the rental vehicle.
+    :type vehicle_category: str
+    :param price_per_day: The maximum price the user is willing to pay per day.
+    :type price_per_day: float
+    :returns: A formatted string containing the full prompt for the Bedrock model.
+    :rtype: str
+    """
+
+    return f"""
+You are a car-rental assistant.
+
+Requirements:
+- Vehicle category: "{vehicle_category}"
+- Maximum price: {price_per_day} per day
+- Only include vehicles that match or reasonably fit the category.
+- Use only information from the knowledge base.
+- If no results, return an empty array for "results".
+- Respond only with valid JSON.
+
+Return JSON in exactly this structure:
+
+{{
+  "status": "success",
+  "query": {{
+    "category": "{vehicle_category}",
+    "max_price_per_day": {price_per_day}
+  }},
+  "results": [
+    {{
+      "name": "string",
+      "price_per_day": number,
+      "seats": number,
+      "category": "string",
+      "description": "string"
+    }}
+  ]
+}}
+"""
             },
         },
     )
