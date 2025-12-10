@@ -28,7 +28,12 @@
 				"humao.rest-client"
 			]
 		}
-	}
+	},
+	// Load AWS config from host
+	"mounts": [
+		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind",
+		"source=${localEnv:USERPROFILE}\\.aws,target=/home/vscode/.aws,type=bind"
+	]
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
