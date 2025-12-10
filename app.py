@@ -61,14 +61,51 @@ Return JSON in exactly this structure:
   ]
 }}
 """
+
+
+def fetch_vehicle_recommendations(vehicle_category: str, price_per_day: float):
+    """
+    Fetches vehicle recommendations from a knowledge base using a custom prompt.
+
+    :param vehicle_category: The desired category of the rental vehicle.
+    :type vehicle_category: str
+    :param price_per_day: The maximum price the user is willing to pay per day.
+    :type price_per_day: float
+    :returns: A string containing the JSON response from the Bedrock service, which includes
+              the list of recommended vehicles, or an error message if the call fails.
+    :rtype: str
+    """
+
+    # Setup bedrock
+    client = boto3.client("bedrock-agent-runtime", region_name=REGION)
+
+    prompt = build_prompt(vehicle_category, price_per_day)
+
+    # TODO: Improve handling
+    # Call bedrock
+    try:
+        response = client.retrieve_and_generate(
+            input={"text": prompt},
+            retrieveAndGenerateConfiguration={
+                "type": "KNOWLEDGE_BASE",
+                "knowledgeBaseConfiguration": {
+                    "knowledgeBaseId": KB_ID,
+                    "modelArn": MODEL_ARN,
+                },
             },
-        },
-    )
+        )
 
-    answer = response["output"]["text"]
+        try:
+            response_text = response["output"]["text"]
+            return response_text
+        except Exception as e:
+            return f"Error: {str(e)}"
 
-except Exception as e:
-    print(f"Error: {str(e)}")
+    except Exception as e:
+        print(f"Error: {str(e)}")
 
 
-print(answer)
+price_per_day = 100
+vehicle_category = "family"
+
+print(fetch_vehicle_recommendations(vehicle_category, price_per_day))
