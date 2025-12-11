@@ -34,11 +34,13 @@ def bedrock_client():
 
 # TODO: Sanitise prompt
 def build_prompt(prompt: str):
+    clean_prompt = re.sub(r"[^a-zA-Z0-9 ]", "", prompt)
+
     return f"""
     You are a car-rental assistant.
 
     A customer has provided the following prompt for the car they want:
-    {prompt}
+    {clean_prompt}
 
     Requirements:
     - Only include vehicles that match or reasonably fit the request.
@@ -51,7 +53,7 @@ def build_prompt(prompt: str):
     {{
       "status": "success",
       "query": {{
-        "prompt": "{prompt}"
+        "prompt": "{clean_prompt}"
       }},
       "results": [
         {{
@@ -111,4 +113,5 @@ async def get_recommendations(
 
     # Clean LLM response
     response_text = clean_llm_response(response_text)
+    # TODO: Use pydantic for ensuring correct format
     return response_text
