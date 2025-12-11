@@ -84,3 +84,31 @@ def clean_llm_response(llm_response: str) -> dict:
             "raw_output": llm_response,
         }
 
+
+@app.get("/recommendations")
+async def get_recommendations(
+    prompt: str,
+    client=Depends(bedrock_client),
+):
+    built_prompt = build_prompt(prompt)
+
+    try:
+        response = client.retrieve_and_generate(
+            input={"text": built_prompt},
+            retrieveAndGenerateConfiguration={
+                "type": "KNOWLEDGE_BASE",
+                "knowledgeBaseConfiguration": {
+                    "knowledgeBaseId": KB_ID,
+                    "modelArn": MODEL_ARN,
+                },
+            },
+        )
+
+        response_text = response["output"]["text"]
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Bedrock API error: {str(e)}")
+
+    # Clean LLM response
+    response_text = clean_llm_response(response_text)
+    return response_text
