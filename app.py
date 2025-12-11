@@ -66,7 +66,7 @@ def bedrock_client(settings: Settings = Depends(get_settings)):
 
 # TODO: Sanitise prompt
 def build_prompt(prompt: str):
-    clean_prompt = re.sub(r"[^a-zA-Z0-9 ]", "", prompt)
+    clean_prompt = re.sub(r"[^a-zA-Z0-9 \t\n\r\f\v.,!?;:'\"()—–-]", "", prompt)
 
     return f"""
     You are a car-rental assistant.
@@ -77,7 +77,7 @@ def build_prompt(prompt: str):
     Requirements:
     - Only include vehicles that match or reasonably fit the request.
     - Use only information from the knowledge base.
-    - If no results, return an empty array for "results".
+    - If there are no suitable cars, provide an empty array for "results".
     - Respond only with valid JSON containing a list of suitable vehicles.
 
     Return JSON in exactly this structure, with the reasoning why a car is a good purchase in the "reasoning" field:
@@ -96,7 +96,12 @@ def build_prompt(prompt: str):
         }}
       ]
     }}
+    
+    Make sure that the JSON you are returning is valid, and provide a maximum of 10 in the "results" field.
     """
+    # Limiting results field prevents truncated JSON by reaching token limit
+    # ex. prompt = "any cars" uses more token than available
+    # TODO: find a better solution for reaching token limit
 
 
 def clean_llm_response(llm_response: str) -> dict:
@@ -111,7 +116,7 @@ def clean_llm_response(llm_response: str) -> dict:
         clean_response = json.loads(json_string.strip())
         return clean_response
     except json.JSONDecodeError as e:
-        print(f"Error parsing JSON: {e}")
+        logger.error(f"Error cleaning JSON from LLM: {e}")
         return {
             "status": "error",
             "message": "Failed to parse LLM response",
