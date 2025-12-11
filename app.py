@@ -1,10 +1,15 @@
+from functools import lru_cache
 import json
 import re
 import boto3
-import os
-from dotenv import load_dotenv
+import logging
 from fastapi import Depends, FastAPI, HTTPException
 from pydantic import BaseModel
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 # Pydantic models
@@ -21,16 +26,25 @@ class RecommendationsResponse(BaseModel):
     results: list[VehicleRecommendations]
 
 
-load_dotenv()
+class Settings(BaseSettings):
+    BEDROCK_REGION: str
+    BEDROCK_KB_ID: str
+    BEDROCK_MODEL_ARN: str
 
-REGION = os.getenv("BEDROCK_REGION")
-KB_ID = os.getenv("BEDROCK_KB_ID")
-MODEL_ARN = os.getenv("BEDROCK_MODEL_ARN")
+    model_config = SettingsConfigDict(env_file=".env")
 
-if not all([REGION, KB_ID, MODEL_ARN]):
-    raise RuntimeError(
-        "Missing required environment variables: BEDROCK_REGION, BEDROCK_KB_ID, BEDROCK_MODEL_ARN"
-    )
+
+# Only create settings object once
+@lru_cache()
+def get_settings() -> Settings:
+    try:
+        return Settings()
+    except Exception as e:
+        logger.error(f"Failed to load configuration: {e}")
+        # Re-raise as a RuntimeError to halt startup if config is missing/invalid
+        raise RuntimeError(
+            "Application failed to start due to missing environment variables."
+        )
 
 
 # Setup FastAPI
@@ -38,9 +52,11 @@ app = FastAPI()
 
 
 # Bedrock client
-def bedrock_client():
+def bedrock_client(settings: Settings = Depends(get_settings)):
     try:
-        client = boto3.client("bedrock-agent-runtime", region_name=REGION)
+        client = boto3.client(
+            "bedrock-agent-runtime", region_name=settings.BEDROCK_REGION
+        )
         return client
     except Exception as e:
         raise HTTPException(
@@ -107,6 +123,7 @@ def clean_llm_response(llm_response: str) -> dict:
 async def get_recommendations(
     prompt: str,
     client=Depends(bedrock_client),
+    settings: Settings = Depends(get_settings),
 ):
     built_prompt = build_prompt(prompt)
 
@@ -116,8 +133,8 @@ async def get_recommendations(
             retrieveAndGenerateConfiguration={
                 "type": "KNOWLEDGE_BASE",
                 "knowledgeBaseConfiguration": {
-                    "knowledgeBaseId": KB_ID,
-                    "modelArn": MODEL_ARN,
+                    "knowledgeBaseId": settings.BEDROCK_KB_ID,
+                    "modelArn": settings.BEDROCK_MODEL_ARN,
                 },
             },
         )
@@ -125,7 +142,8 @@ async def get_recommendations(
         response_text = response["output"]["text"]
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Bedrock API error: {str(e)}")
+        logger.error(f"Unexpected error calling Bedrock: {e}")
+        raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
 
     # Clean LLM response
     response_text = clean_llm_response(response_text)

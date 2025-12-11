@@ -3,4 +3,4 @@ black
 # --
 boto3
 fastapi[standard]
-python-dotenv
+pydantic_settings
