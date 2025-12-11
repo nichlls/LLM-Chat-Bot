@@ -4,6 +4,22 @@ import boto3
 import os
 from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, HTTPException
+from pydantic import BaseModel
+
+
+# Pydantic models
+class VehicleRecommendations(BaseModel):
+    name: str
+    price_per_day: float
+    seats: int
+    reasoning: str
+
+
+class RecommendationsResponse(BaseModel):
+    status: str
+    query: dict
+    results: list[VehicleRecommendations]
+
 
 load_dotenv()
 
@@ -87,7 +103,7 @@ def clean_llm_response(llm_response: str) -> dict:
         }
 
 
-@app.get("/recommendations")
+@app.get("/recommendations", response_model=RecommendationsResponse)
 async def get_recommendations(
     prompt: str,
     client=Depends(bedrock_client),
@@ -113,5 +129,10 @@ async def get_recommendations(
 
     # Clean LLM response
     response_text = clean_llm_response(response_text)
-    # TODO: Use pydantic for ensuring correct format
-    return response_text
+    try:
+        valid_response = RecommendationsResponse(**response_text)
+        return valid_response
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"Failed to validate response: {str(e)}"
+        )
