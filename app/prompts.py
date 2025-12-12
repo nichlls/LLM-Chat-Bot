@@ -15,6 +15,8 @@ def build_prompt(prompt: str):
     - Use only information from the knowledge base.
     - If there are no suitable cars, provide an empty array for "results".
     - Respond only with valid JSON containing a list of suitable vehicles.
+    
+    If the prompt is not relevant to cars, return an empty "results" field.
 
     Return JSON in exactly this structure, with the reasoning why a car is a good purchase in the "reasoning" field:
 
