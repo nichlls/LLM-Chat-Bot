@@ -5,6 +5,7 @@ from app.dependencies import bedrock_client
 from app.models.models import RecommendationsResponse, Settings
 from app.prompts import build_prompt
 from app.utils import clean_llm_response
+from fastapi.middleware.cors import CORSMiddleware
 
 
 logging.basicConfig(level=logging.INFO)
@@ -13,6 +14,17 @@ logger = logging.getLogger(__name__)
 
 # Setup FastAPI
 app = FastAPI()
+
+origins = ["http://127.0.0.1:5173", "http://localhost:5173"]
+
+# TODO: Restrict methods and headers to only necessary
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/recommendations", response_model=RecommendationsResponse)
