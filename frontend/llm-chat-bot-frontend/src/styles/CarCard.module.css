@@ -1,0 +1,33 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.cardTitle {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.cardDetails {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.seats {
+  color: #7f8c8d;
+}
+
+.reasoning {
+  margin: 0;
+  color: #34495e;
+  line-height: 1.5;
+}

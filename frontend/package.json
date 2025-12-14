@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "create-vite": "^8.2.0",
+    "eslint": "^8.57.1",
+    "prettier": "^3.7.4",
+    "prettier-eslint": "^16.4.2"
+  }
+}
