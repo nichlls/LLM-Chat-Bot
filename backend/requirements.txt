@@ -1,0 +1,6 @@
+# for formatting
+black
+# --
+boto3
+fastapi[standard]
+pydantic_settings
