@@ -1,5 +1,0 @@
-# for formatting
-black
-# --
-boto3
-python-dotenv
