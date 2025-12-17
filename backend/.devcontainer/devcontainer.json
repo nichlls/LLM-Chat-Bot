@@ -19,13 +19,14 @@
 				"editor.formatOnSave": true,
 				"python.formatting.provider": "none",
 				"[python]": {
-					"editor.defaultFormatter": "ms-python.black-formatter"
+					"editor.defaultFormatter": "charliermarsh.ruff"
 				}
 			},
 			"extensions": [
-				"ms-python.black-formatter",
 				"zerefdev.todo-highlighter",
-				"humao.rest-client"
+				"humao.rest-client",
+				"astral-sh.ty",
+				"charliermarsh.ruff"
 			]
 		}
 	},
