@@ -59,6 +59,7 @@ async def get_recommendations(
         valid_response = RecommendationsResponse(**response_text)
         return valid_response
     except Exception as e:
+        logger.error(f"Failed to validate response: {e}.\n Response: {response_text}")
         raise HTTPException(
             status_code=500, detail=f"Failed to validate response: {str(e)}"
         )

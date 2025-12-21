@@ -28,14 +28,14 @@ def build_prompt(prompt: str):
       "results": [
         {{
           "name": "string",
-          "price_per_day": number,
-          "seats": number,
+          "price_per_day": double,
+          "seats": int,
           "reasoning": "string"
         }}
       ]
     }}
     
-    Make sure that the JSON you are returning is valid, and provide a maximum of 10 in the "results" field.
+    Make sure that the JSON you are returning is valid, and provide a maximum of 5 in the "results" field. Make sure all data matches the data type in the JSON.
     """
     # Limiting results field prevents truncated JSON by reaching token limit
     # ex. prompt = "any cars" uses more token than available
