@@ -19,7 +19,7 @@ origins = ["http://127.0.0.1:5173", "http://localhost:5173"]
 
 # TODO: Restrict methods and headers to only necessary
 app.add_middleware(
-    CORSMiddleware,
+    CORSMiddleware,  # ty:ignore[invalid-argument-type]
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
@@ -59,6 +59,7 @@ async def get_recommendations(
         valid_response = RecommendationsResponse(**response_text)
         return valid_response
     except Exception as e:
+        logger.error(f"Failed to validate response: {e}.\n Response: {response_text}")
         raise HTTPException(
             status_code=500, detail=f"Failed to validate response: {str(e)}"
         )

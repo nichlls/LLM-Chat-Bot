@@ -1,75 +1,67 @@
-## Vehicle Inventory and Usage Guidelines for Car Rental Knowledge Base
+## Refined Vehicle Inventory for Car Rental
 
 ### 1. Small Vans / City Logistics (Small Business Focus)
-# Ideal for quick urban deliveries, florists, small contractors, or last-mile services. Good fuel economy.
 
-Vehicle Name: Ford Transit Connect | Year: 2022 | Daily Price (USD): 55 | Category: logistics | Keywords: Compact, economical, high roof, small package delivery, city parking, low maintenance.
-Vehicle Name: Mercedes-Benz Metris Cargo | Year: 2023 | Daily Price (USD): 68 | Category: logistics | Keywords: Mid-size commercial, comfortable drive, larger load capacity than compact vans.
-Vehicle Name: Ram ProMaster City | Year: 2022 | Daily Price (USD): 52 | Category: logistics | Keywords: Best value, front-wheel drive, low load floor, ideal for loading/unloading boxes, plumbing supplies.
-Vehicle Name: Nissan NV200 | Year: 2021 | Daily Price (USD): 49 | Category: logistics | Keywords: Cheapest van option, small footprint, very nimble, excellent for tight urban streets and budget-conscious businesses.
-Vehicle Name: Chevrolet City Express | Year: 2020 | Daily Price (USD): 47 | Category: logistics | Keywords: Entry-level logistics, older model, very budget-friendly for light transport.
-Vehicle Name: Peugeot Partner | Year: 2022 | Daily Price (USD): 50 | Category: logistics | Keywords: European van, comfortable cab, good fuel efficiency, common for catering and small trade services.
-Vehicle Name: Citroën Berlingo | Year: 2022 | Daily Price (USD): 50 | Category: logistics | Keywords: Similar to Peugeot Partner, versatile configuration, favored by electricians and small repair services.
-Vehicle Name: Toyota Proace City | Year: 2023 | Daily Price (USD): 54 | Category: logistics | Keywords: High reliability, renowned Toyota durability, practical and easy to drive in the city.
-Vehicle Name: Volkswagen Caddy Cargo | Year: 2023 | Daily Price (USD): 56 | Category: logistics | Keywords: Premium small van, comfortable, higher security features, efficient diesel engine.
-Vehicle Name: Renault Kangoo Express | Year: 2021 | Daily Price (USD): 48 | Category: logistics | Keywords: Affordable French utility, reliable city hauler, good budget option for light loads.
+* **Name:** Ford Transit Connect | **Price Per Day:** 55 | **Seats:** 2 | **Description:** Compact van, ideal for urban deliveries and tight parking spaces, excellent fuel efficiency.
+* **Name:** Mercedes-Benz Metris Cargo | **Price Per Day:** 68 | **Seats:** 2 | **Description:** Mid-sized commercial van, offers a more comfortable drive and higher load capacity.
+* **Name:** Ram ProMaster City | **Price Per Day:** 52 | **Seats:** 2 | **Description:** Affordable, with low load floor, best for small deliveries like boxes and supplies.
+* **Name:** Nissan NV200 | **Price Per Day:** 49 | **Seats:** 2 | **Description:** Small, budget-friendly van, perfect for tight city streets and smaller loads.
+* **Name:** Chevrolet City Express | **Price Per Day:** 47 | **Seats:** 2 | **Description:** Cost-effective, entry-level logistics van, suited for light transport.
+* **Name:** Peugeot Partner | **Price Per Day:** 50 | **Seats:** 2 | **Description:** European compact van, well-regarded for fuel efficiency and comfort for short jobs.
+* **Name:** Citroën Berlingo | **Price Per Day:** 50 | **Seats:** 2 | **Description:** Similar to Peugeot Partner, versatile, ideal for electricians and repair services.
+* **Name:** Toyota Proace City | **Price Per Day:** 54 | **Seats:** 2 | **Description:** Known for Toyota’s reliability, efficient for city driving and small business use.
+* **Name:** Volkswagen Caddy Cargo | **Price Per Day:** 56 | **Seats:** 2 | **Description:** Premium small van with higher security features, ideal for city deliveries.
+* **Name:** Renault Kangoo Express | **Price Per Day:** 48 | **Seats:** 2 | **Description:** Reliable and affordable, great for small deliveries around town.
 
 ### 2. Large Cargo Vans (Small Business / Heavy Duty)
-# Ideal for large deliveries, construction materials, large furniture transport, and moving services. High volume capacity.
 
-Vehicle Name: Ford Transit Medium Roof | Year: 2023 | Daily Price (USD): 82 | Category: logistics | Keywords: Most popular, excellent cargo dimensions, versatile interior, good compromise between size and drivability.
-Vehicle Name: Mercedes-Benz Sprinter 2500 | Year: 2023 | Daily Price (USD): 95 | Category: logistics | Keywords: Highest capacity van, premium comfort, rear-wheel drive, excellent visibility, commercial-grade chassis.
-Vehicle Name: Ram ProMaster 2500 | Year: 2022 | Daily Price (USD): 88 | Category: logistics | Keywords: Low load height, wide cargo area, best for palletized goods, often preferred by warehouses and furniture movers.
-Vehicle Name: Volkswagen Transporter T6 Cargo | Year: 2022 | Daily Price (USD): 87 | Category: logistics | Keywords: European standard, reliable, durable engine, good for long-haul commercial trips.
-Vehicle Name: Renault Trafic | Year: 2021 | Daily Price (USD): 79 | Category: logistics | Keywords: Excellent payload rating, spacious cabin, good value for large cargo.
-Vehicle Name: Fiat Ducato Panel Van | Year: 2022 | Daily Price (USD): 83 | Category: logistics | Keywords: Reliable heavy hauler, large door openings, durable cargo area, competitive pricing for a large van.
-Vehicle Name: Iveco Daily Van | Year: 2023 | Daily Price (USD): 92 | Category: logistics | Keywords: Commercial-grade chassis, very robust, suitable for sustained heavy loads and cross-country hauling.
-Vehicle Name: Toyota HiAce Cargo | Year: 2022 | Daily Price (USD): 85 | Category: logistics | Keywords: Unmatched reliability, powerful engine, highly durable for heavy-duty daily use.
-Vehicle Name: Hyundai H350 Cargo | Year: 2021 | Daily Price (USD): 78 | Category: logistics | Keywords: Long-distance cargo, driver comfort, good fuel tank capacity.
-Vehicle Name: Maxus V80 Cargo | Year: 2021 | Daily Price (USD): 74 | Category: logistics | Keywords: Most budget-friendly large van, high roof, maximum volume for the price.
+* **Name:** Ford Transit Medium Roof | **Price Per Day:** 82 | **Seats:** 2 | **Description:** Most popular choice for large deliveries, offering good cargo space and drivability.
+* **Name:** Mercedes-Benz Sprinter 2500 | **Price Per Day:** 95 | **Seats:** 2 | **Description:** Premium van with the highest cargo capacity and excellent visibility.
+* **Name:** Ram ProMaster 2500 | **Price Per Day:** 88 | **Seats:** 2 | **Description:** Known for its low load height and wide cargo area, great for moving large, heavy goods.
+* **Name:** Volkswagen Transporter T6 Cargo | **Price Per Day:** 87 | **Seats:** 2 | **Description:** Durable engine, perfect for long-haul trips and heavy-duty tasks.
+* **Name:** Renault Trafic | **Price Per Day:** 79 | **Seats:** 2 | **Description:** Spacious van with great payload capacity, suitable for large cargo needs.
+* **Name:** Fiat Ducato Panel Van | **Price Per Day:** 83 | **Seats:** 2 | **Description:** Reliable, large cargo space, competitive pricing for heavy-duty use.
+* **Name:** Iveco Daily Van | **Price Per Day:** 92 | **Seats:** 2 | **Description:** Strong and robust, designed for commercial-grade hauling and long distances.
+* **Name:** Toyota HiAce Cargo | **Price Per Day:** 85 | **Seats:** 2 | **Description:** Extremely reliable with a durable engine, perfect for heavy-duty tasks.
+* **Name:** Hyundai H350 Cargo | **Price Per Day:** 78 | **Seats:** 2 | **Description:** Long-distance cargo van, offers both driver comfort and large fuel tank capacity.
+* **Name:** Maxus V80 Cargo | **Price Per Day:** 74 | **Seats:** 2 | **Description:** Budget-friendly, spacious van, offers a high roof for maximum cargo volume.
 
 ### 3. Box Trucks & Pickups (Small Business / Heavy Equipment)
-# For the biggest hauling needs, equipment transport, and large-scale moves.
 
-Vehicle Name: Ford Transit Box Truck 12ft | Year: 2023 | Daily Price (USD): 120 | Category: logistics | Keywords: Entry-level box truck, hydraulic lift gate available, perfect for large home moves or event transport.
-Vehicle Name: Isuzu NPR 14ft Box Truck | Year: 2022 | Daily Price (USD): 130 | Category: logistics | Keywords: Commercial chassis, powerful engine, ideal for industrial supply delivery, heavier cargo, long-distance moving.
-Vehicle Name: Hino 155 Dry Van | Year: 2021 | Daily Price (USD): 125 | Category: logistics | Keywords: Reputable Japanese reliability, durable box, common choice for small wholesale distribution and business-to-business transport.
-Vehicle Name: Mitsubishi Fuso Canter | Year: 2020 | Daily Price (USD): 118 | Category: logistics | Keywords: Compact box truck, good maneuverability in tight industrial areas, lower cost option.
-Vehicle Name: Mercedes Atego Cargo Box | Year: 2023 | Daily Price (USD): 145 | Category: logistics | Keywords: Premium heavy truck, long-haul comfort, high weight capacity, professional transport.
-Vehicle Name: Ford F-150 XL | Year: 2023 | Daily Price (USD): 75 | Category: logistics | Keywords: Pickup truck, open bed hauling, towing capacity, equipment transport, construction site use.
-Vehicle Name: Chevrolet Silverado 1500 WT | Year: 2022 | Daily Price (USD): 78 | Category: logistics | Keywords: Durable pickup, slightly more comfortable than F-150, excellent for towing medium trailers.
-Vehicle Name: Toyota Hilux Single Cab | Year: 2021 | Daily Price (USD): 72 | Category: logistics | Keywords: Extreme durability, off-road capable (if needed), reliable workhorse pickup.
+* **Name:** Ford Transit Box Truck 12ft | **Price Per Day:** 120 | **Seats:** 2 | **Description:** Entry-level box truck, ideal for home moves and small event transport, with optional lift gate.
+* **Name:** Isuzu NPR 14ft Box Truck | **Price Per Day:** 130 | **Seats:** 2 | **Description:** Commercial-grade truck, perfect for industrial deliveries and long-distance moving.
+* **Name:** Hino 155 Dry Van | **Price Per Day:** 125 | **Seats:** 2 | **Description:** Reliable, durable box truck, a popular choice for wholesale distribution.
+* **Name:** Mitsubishi Fuso Canter | **Price Per Day:** 118 | **Seats:** 2 | **Description:** Compact, easy to maneuver box truck, ideal for tight spaces and smaller moves.
+* **Name:** Mercedes Atego Cargo Box | **Price Per Day:** 145 | **Seats:** 2 | **Description:** Premium heavy-duty box truck, designed for long-haul comfort and large deliveries.
+* **Name:** Ford F-150 XL | **Price Per Day:** 75 | **Seats:** 3 | **Description:** Durable pickup truck, great for hauling equipment or towing trailers at construction sites.
+* **Name:** Chevrolet Silverado 1500 WT | **Price Per Day:** 78 | **Seats:** 3 | **Description:** Reliable and comfortable pickup, excellent for towing and transporting medium loads.
+* **Name:** Toyota Hilux Single Cab | **Price Per Day:** 72 | **Seats:** 2 | **Description:** Known for extreme durability and off-road capability, perfect for tough jobs.
 
 ### 4. Personal Sedans / Commuters (Personal Focus)
-# Excellent fuel economy, low price, easy to park. Ideal for daily commuting or solo travelers.
 
-Vehicle Name: Nissan Sentra | Year: 2022 | Daily Price (USD): 36 | Category: personal | Keywords: Absolute cheapest option, great gas mileage, no-frills commuter, best choice for strict budgets.
-Vehicle Name: Kia Forte | Year: 2023 | Daily Price (USD): 37 | Category: personal | Keywords: Very budget-friendly, modern styling, good infotainment system.
-Vehicle Name: Hyundai Elantra | Year: 2022 | Daily Price (USD): 38 | Category: personal | Keywords: Cheap, modern tech features (Apple CarPlay/Android Auto), reliable for daily use.
-Vehicle Name: Toyota Corolla | Year: 2022 | Daily Price (USD): 40 | Category: personal | Keywords: Unmatched reliability, economical, standard safety features, perfect for long-term rentals or students.
-Vehicle Name: Honda Civic | Year: 2023 | Daily Price (USD): 42 | Category: personal | Keywords: Sporty handling, good balance of fun and efficiency, great commuter car.
-Vehicle Name: Toyota Camry | Year: 2023 | Daily Price (USD): 55 | Category: personal | Keywords: Mid-size comfort, smooth ride, generous legroom, ideal for business travel or longer road trips.
-Vehicle Name: Tesla Model 3 | Year: 2023 | Daily Price (USD): 95 | Category: personal | Keywords: Electric Vehicle (EV), zero emissions, quiet ride, excellent technology, fast charging, best for tech-savvy renters.
+* **Name:** Nissan Sentra | **Price Per Day:** 36 | **Seats:** 5 | **Description:** Budget-friendly sedan with excellent fuel efficiency, ideal for daily commutes.
+* **Name:** Kia Forte | **Price Per Day:** 37 | **Seats:** 5 | **Description:** Stylish, affordable sedan with good tech features and comfortable ride.
+* **Name:** Hyundai Elantra | **Price Per Day:** 38 | **Seats:** 5 | **Description:** Reliable, compact sedan with modern tech like Apple CarPlay and Android Auto.
+* **Name:** Toyota Corolla | **Price Per Day:** 40 | **Seats:** 5 | **Description:** Known for unmatched reliability and fuel efficiency, great for long-term use.
+* **Name:** Honda Civic | **Price Per Day:** 42 | **Seats:** 5 | **Description:** Sporty sedan with a good balance of fun and practicality for everyday use.
+* **Name:** Toyota Camry | **Price Per Day:** 55 | **Seats:** 5 | **Description:** Comfortable mid-size sedan with smooth ride and generous interior space.
+* **Name:** Tesla Model 3 | **Price Per Day:** 95 | **Seats:** 5 | **Description:** Electric car with zero emissions, offering fast charging and cutting-edge technology.
 
 ### 5. Personal SUVs & Minivans (Family Transport)
-# Higher seating position, space for luggage, and family-friendly features. Ideal for family vacations and weekend trips.
 
-Vehicle Name: Kia Sportage | Year: 2022 | Daily Price (USD): 59 | Category: personal | Keywords: Affordable SUV, good cargo space, modern styling, great balance of price and utility for small families.
-Vehicle Name: Toyota RAV4 | Year: 2023 | Daily Price (USD): 65 | Category: personal | Keywords: Benchmark SUV, extremely reliable, all-wheel drive available (if requested), very popular family choice.
-Vehicle Name: Honda CR-V | Year: 2023 | Daily Price (USD): 67 | Category: personal | Keywords: Spacious cabin, excellent fuel efficiency for an SUV, superior comfort and safety ratings.
-Vehicle Name: Toyota Highlander | Year: 2023 | Daily Price (USD): 82 | Category: personal | Keywords: 7-seater, 3rd row seating, large capacity, great for multi-generational families or trips requiring lots of luggage space.
-Vehicle Name: Ford Explorer | Year: 2022 | Daily Price (USD): 85 | Category: personal | Keywords: Large 3-row SUV, powerful engine option, rugged appearance, good for long road trips.
-Vehicle Name: Toyota Sienna | Year: 2023 | Daily Price (USD): 90 | Category: personal | Keywords: Minivan, excellent passenger space, fuel-efficient hybrid engine, easy access with sliding doors, the ultimate family vehicle.
-Vehicle Name: Honda Odyssey | Year: 2023 | Daily Price (USD): 92 | Category: personal | Keywords: Minivan, best passenger space and comfort, quiet ride, ideal for small children and long family drives.
-Vehicle Name: Tesla Model Y | Year: 2023 | Daily Price (USD): 110 | Category: personal | Keywords: Electric SUV (EV), spacious interior, high safety ratings, premium feel, eco-friendly family transport.
+* **Name:** Kia Sportage | **Price Per Day:** 59 | **Seats:** 5 | **Description:** Affordable SUV, offering good cargo space and great value for small families.
+* **Name:** Toyota RAV4 | **Price Per Day:** 65 | **Seats:** 5 | **Description:** Reliable, popular compact SUV with all-wheel drive option for versatility.
+* **Name:** Honda CR-V | **Price Per Day:** 67 | **Seats:** 5 | **Description:** Spacious and fuel-efficient SUV with excellent safety features, ideal for families.
+* **Name:** Toyota Highlander | **Price Per Day:** 82 | **Seats:** 7 | **Description:** Spacious 7-seater SUV, great for families needing extra seating and luggage space.
+* **Name:** Ford Explorer | **Price Per Day:** 85 | **Seats:** 7 | **Description:** Large SUV with 3 rows of seating, perfect for long trips and family vacations.
+* **Name:** Toyota Sienna | **Price Per Day:** 90 | **Seats:** 7 | **Description:** Minivan with excellent passenger space, fuel-efficient hybrid engine, and easy sliding doors.
+* **Name:** Honda Odyssey | **Price Per Day:** 92 | **Seats:** 7 | **Description:** Spacious minivan with top-tier comfort and quiet ride, ideal for family road trips.
+* **Name:** Tesla Model Y | **Price Per Day:** 110 | **Seats:** 5 | **Description:** Premium electric SUV, offering plenty of space, high safety ratings, and eco-friendly features.
 
 ### 6. Premium & Corporate (Commercial Focus)
-# High-end vehicles for executive travel, client transport, or premium business needs. Focus on image and comfort.
 
-Vehicle Name: Mercedes-Benz E-Class | Year: 2023 | Daily Price (USD): 140 | Category: commercial | Keywords: Executive sedan, luxury interior, professional image, ideal for airport pickups and corporate events.
-Vehicle Name: BMW 5 Series | Year: 2023 | Daily Price (USD): 145 | Category: commercial | Keywords: Performance luxury, impressive technology, comfortable for long business journeys, strong brand image.
-Vehicle Name: Audi A6 | Year: 2022 | Daily Price (USD): 138 | Category: commercial | Keywords: Sleek styling, technology-focused cabin, comfortable long-distance cruiser, executive-level sedan.
-Vehicle Name: Mercedes-Benz GLE | Year: 2023 | Daily Price (USD): 170 | Category: commercial | Keywords: Premium SUV, high seating, luxury transport for small groups, impressive presence.
-Vehicle Name: Mercedes-Benz Sprinter Passenger | Year: 2023 | Daily Price (USD): 160 | Category: commercial | Keywords: 12+ seater van, dedicated driver/shuttle service, ideal for crew transport, large events, or tour groups.
-Vehicle Name: Mercedes V-Class VIP Transport | Year: 2023 | Daily Price (USD): 180 | Category: commercial | Keywords: Highest-end transport, chauffeur-grade, reclining leather seats, suitable for VIP clients, executive meetings, or special events.
-Vehicle Name: Ford F-250 Super Duty | Year: 2022 | Daily Price (USD): 95 | Category: commercial | Keywords: Heavy duty pickup, maximum towing capacity, construction equipment transport, industrial applications.
+* **Name:** Mercedes-Benz E-Class | **Price Per Day:** 140 | **Seats:** 5 | **Description:** Luxury executive sedan with a professional image, ideal for business and airport transport.
+* **Name:** BMW 5 Series | **Price Per Day:** 145 | **Seats:** 5 | **Description:** Performance luxury sedan, equipped with advanced tech and designed for comfort on long business trips.
+* **Name:** Audi A6 | **Price Per Day:** 138 | **Seats:** 5 | **Description:** Sleek, stylish sedan with a tech-forward interior, designed for executive travel.
+* **Name:** Mercedes-Benz GLE | **Price Per Day:** 170 | **Seats:** 5 | **Description:** Premium luxury SUV with a commanding presence and spacious interior for small groups.
+* **Name:** Mercedes-Benz Sprinter Passenger
